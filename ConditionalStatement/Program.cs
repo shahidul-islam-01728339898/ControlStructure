@@ -78,26 +78,55 @@
 
 
 //04. Check vowel charecter using switch statement with string input
-Console.Write("Enter a Valid letter: ");
-char letter = Convert.ToChar(Console.ReadLine());
 
-switch (char.ToLower(letter))
+
+//Console.Write("Enter a Valid letter: ");
+//char letter = Convert.ToChar(Console.ReadLine());
+
+//switch (char.ToLower(letter))
+//{
+//    case 'a':
+//    case 'e':
+//    case 'i':
+//    case 'o':
+//    case 'u':
+//        Console.WriteLine($"This {letter} is a vowel letter");
+//        break;
+//    default:
+//        if (char.IsLetter(letter))
+//        {
+//            Console.WriteLine($"This Letter: '{letter}' is a consonant");
+//        }
+//        else
+//        {
+//            Console.WriteLine($"This is not a valid character");
+//        }
+//        break;
+//}
+
+
+//05. Check the day using switch statement
+
+Console.Write("Write the name of a single day: ");
+string day= Console.ReadLine();
+
+switch (day)
 {
-    case 'a':
-    case 'e':
-    case 'i':
-    case 'o':
-    case 'u':
-        Console.WriteLine($"This {letter} is a vowel letter");
+    case "saturday":
+        Console.WriteLine();
         break;
+    case "sunday":
+        Console.WriteLine("This is sunday");
+        break;
+    case "monday":
+        Console.WriteLine("This is monday");
+        break;
+    case "tuesday":
+        Console.WriteLine("This is Tuesday");
+        break;
+
     default:
-        if (char.IsLetter(letter))
-        {
-            Console.WriteLine($"This Letter: '{letter}' is a consonant");
-        }
-        else
-        {
-            Console.WriteLine($"This is not a valid character");
-        }
+        Console.WriteLine("This is not a valid Day");
         break;
 }
+
