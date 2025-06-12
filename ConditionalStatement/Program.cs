@@ -48,29 +48,56 @@
 //}
 
 
-Console.Write("Enter A Number: ");
-int degit = Convert.ToInt32(Console.ReadLine());
 
-switch (degit)
+////03. Check the number using switch statement
+//Console.Write("Enter A Number: ");
+//int degit = Convert.ToInt32(Console.ReadLine());
+
+//switch (degit)
+//{
+//    case 0:
+//        Console.WriteLine("Yes, this is Zero Number");
+//        break;
+//    case 1:
+//        Console.WriteLine("Yes, this is One Number");
+//        break;
+//    case 2:
+//        Console.WriteLine("Yes, This is Two");
+//        break;
+//    case 3:
+//        Console.WriteLine("Yes, This is Three");
+//        break;
+//    case 4:
+//        Console.WriteLine("Yes, This is four");
+//        break;
+//    default:
+//        Console.WriteLine("This is not a valid number between 0 to 4)");
+//        break;
+
+//}
+
+
+//04. Check vowel charecter using switch statement with string input
+Console.Write("Enter a Valid letter: ");
+char letter = Convert.ToChar(Console.ReadLine());
+
+switch (char.ToLower(letter))
 {
-    case 0:
-        Console.WriteLine("Yes, this is Zero Number");
-        break;
-    case 1:
-        Console.WriteLine("Yes, this is One Number");
-        break;
-    case 2:
-        Console.WriteLine("Yes, This is Two");
-        break;
-    case 3:
-        Console.WriteLine("Yes, This is Three");
-        break;
-    case 4:
-        Console.WriteLine("Yes, This is four");
+    case 'a':
+    case 'e':
+    case 'i':
+    case 'o':
+    case 'u':
+        Console.WriteLine($"This {letter} is a vowel letter");
         break;
     default:
-        Console.WriteLine("This is not a valid number between 0 to 4)");
+        if (char.IsLetter(letter))
+        {
+            Console.WriteLine($"This Letter: '{letter}' is a consonant");
+        }
+        else
+        {
+            Console.WriteLine($"This is not a valid character");
+        }
         break;
-
 }
-
